@@ -39,9 +39,6 @@ const getHTMLDocumentTitle = (document: TextDocument) => {
     document.getText()
       .match(/<title>(.*)<\/title>/)
 
-  if (window.activeTextEditor)
-    window.activeTextEditor
-
   return titleMatch
     ? titleMatch[1]
     : 'Untitled'
